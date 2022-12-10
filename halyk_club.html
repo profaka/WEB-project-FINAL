@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Halyk Club</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="script_33.js" defer></script>
+        <link rel="stylesheet" href="halyk_club.css">
+
+        <style>
+        .dropbtn {
+            color: black;
+            padding: 13px;
+            font-size: 13px;
+            cursor: pointer;
+            
+        }
+        
+        .dropdown {
+            position: relative;
+            
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 0px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(117, 117, 117, 0.534);
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 3px 5px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown a:hover {background-color: #ddd;}
+        
+        .show {display: block;}
+    </style>
+    </head>
+
+    <body>
+        <div class= "Main">
+            <div class="Conteiner">
+                <div style = "display: flex;">
+                    <div class= "Logo">
+                        <img src="image/logo_halyk.svg" alt="Logo_Halyk_Bank" width="165px" height="58px">
+                    </div>
+                    <div class= "list">
+                        <div>
+                            <ul class="Ul_first">
+                                <li>
+                                    <a href="Defalt">Частным клиентам</a>
+                                </li>
+                                <li>
+                                    <a href="Defalt">Бизнесу</a>
+                                </li>
+                                <li>
+                                    <a href="halyk_club.html">Halyk Club</a>   
+                                </li>
+                                <li>
+                                    <a href="Defalt">Halyk Info</a>
+                                </li>
+                                <li>
+                                    <a href="O_banke.html">О банке</a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        <div>
+                            <ul class="Ul_first">
+                                <li>
+                                    <a href="Defalt" style="position: relative; bottom: 5px;"> <img src="image/eye.png" height="20px" width="20px" style="position:relative; top: 5px;"> Для слабовидящих</a>
+                                </li>
+                                <li>
+                                    <a href="Defalt" style="position: relative; bottom: 5px;"> <img src="image/geo.png" width="18px" height="20px" style="position: relative; top: 5px;"> Банк на карте </a>
+                                </li>
+                                <li>
+                                    <a href="Defalt" style="position: relative; bottom: 5px;"> <img src="image/call.png" width="18px" height="20px" style="position: relative; top: 5px;"> 7111</a>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button onclick="myFunction()" class="dropbtn">Рус</button>
+                                        <div id="myDropdown" class="dropdown-content">
+                                          <a href="#">ҚАЗ</a>
+                                          <a href="#">ENG</a>
+                                        </div>
+                                      </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+            
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
+    </body>
+</html>

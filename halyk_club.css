@@ -1,0 +1,39 @@
+.First_list{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+.list{
+    display: flex;
+}
+.Conteiner{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+.First_list li{
+    list-style: none;
+}
+.Ul_first{
+    display: flex;
+}
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Ul_first li{
+    margin-left: 15px;
+    list-style: none;
+    position: relative;
+    bottom: 20px;
+}
+a{
+    color: grey;
+}
+.Logo{
+    position: relative;
+    top: 12px;
+}
