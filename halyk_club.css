@@ -34,9 +34,6 @@ a{
     position: relative;
     bottom: 20px;
 }
-a{
-    color: grey;
-}
 .Logo{
     position: relative;
     top: 12px;
@@ -56,4 +53,10 @@ p{
     margin-right: 10px; 
     width: 150px; 
     height: 45px;
+}
+.Ab {
+    color: grey;
+}
+a{
+    color: black;
 }
