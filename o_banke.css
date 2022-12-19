@@ -129,5 +129,12 @@ a{
     margin-bottom: 15px;
 }
 
+.line_down{
+    border-bottom: 3px solid #19ad1e;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    margin-right: 25px;
+}
+
 
 
