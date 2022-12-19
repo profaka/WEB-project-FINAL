@@ -105,6 +105,15 @@ a{
     display: block;
 }
 
+.show-more{
+    width: 150px;
+    height: 35px;
+    background-color: #f1f1f1;
+    color: #059E77;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 0 solid #d4d4d4;
+}
 
 .news{
     border: 0 solid #d4d4d4; 

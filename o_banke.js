@@ -4,6 +4,6 @@ $(".content-block").each(function() {
     hide.hide();
     more.click(function() {
         hide.slideToggle();
-        more.text(more.text() == "Скрыть" ? "Показать еще" : "Скрыть");
+        more.text(more.text() == "Скрыть" ? "Загрузить еще" : "Скрыть");
     });
 });
