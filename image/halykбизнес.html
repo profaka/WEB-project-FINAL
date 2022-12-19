@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+    <style>
+        .topdiv{
+            display: flex;
+            margin-top: 15px;
+        }
+        .Topdivlog{
+            margin: 0 180px;
+        }
+        .topTex{
+            display: flex;
+            margin: 0 -160px;
+        }
+        .colorBack{
+            background-color: white;
+            
+        }
+        .Logo{
+            height: 55px;
+            width: 170px;
+        }
+        .colorTextTop{
+            color: black;
+            display: flex;      
+            margin-top: 20px;
+            margin-left: -275px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .colorTextTop-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .linkCl{
+            color: darkgrey;
+            text-decoration: none;
+            margin: 0 10px;
+            margin-top: -20px;
+        }
+        .linkCl:hover{
+            color: darkgreen;
+            text-decoration: none;
+            margin: 0 10px;
+            margin-top: -20px;
+        }
+        .texptpdo{
+            display: flex;
+        }
+        .text{
+            margin: 0 10px;
+        }
+
+
+        * {
+            box-sizing: border-box
+        }
+        body {
+            font-family: Verdana, sans-serif;
+            margin:0
+        }
+        .mySlides {
+            display: none
+        }
+        img {
+            vertical-align: middle;
+        }
+        .slideshow-container {
+            width: 1535px;
+            height: 400px;
+            margin-top: 20px;
+        }
+        /* Кнопки next & previous*/
+        .prev, .next {            
+            cursor: pointer;
+            position: relative; left: 25px; top: -220px; 
+            width: 100px;
+            height: 50px;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 70px;
+            border-radius: 50px;
+            padding: 18px;
+            margin-top: -22px;
+            color: black;
+            font-weight: bold;
+            background-color: white;
+            font-size: 22px;
+            transition: 0.6s ease;
+            user-select: none;
+
+        }
+        /* Измените положение "next button" */
+        .next {
+            right: 0;
+            position: relative; left: 1415px; top: -220px;
+        }
+        /* Добавьте черный фоновый цвет с небольшой прозрачностью*/
+        .prev:hover, .next:hover {
+            background-color: white
+        }
+        /* Подпись под изображением */
+        .text {
+            color: #ffffff;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #999999;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #111111;
+        }
+        /* Выцветание анимации */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        } 
+        to {
+            opacity: 1
+        }
+        }
+        @keyframes fade {
+        from {
+            opacity: .4
+        } 
+        to {
+            opacity: 1
+        }
+        }
+        /* Для маленьких экранов увеличьте размер текста */
+        @media only screen and (max-width: 300px) {
+        .prev, .next,.text {
+            font-size: 11px
+        }
+        }
+        .pos{
+            position: relative; left: 690px; top: -59px;
+        }
+        
+        .ten{
+            margin-top: 50px;
+            margin-left: 150px;
+        }
+        .cur{
+            position: relative; top: 22px; right: -680px;
+            color: darkgreen;
+            text-decoration: none;
+        }
+        .cur:hover{
+            color: green;
+        }
+        
+        .imgr{
+            margin-top: 50px;
+            width: 300px;
+            height: 400px;
+            margin: 15px;
+        }
+        .imgrm{
+            display: flex;
+            margin-left: -50px;
+        }
+        .fr{
+            display: flex;
+        }
+        .tenge{
+            display: flex;
+            margin-left: -40px;
+        }
+        
+        .texdow{
+            background-color: snow;
+
+        }
+        
+        .t{
+            display: flex;
+            margin-left: 120px;
+        }
+        
+        .te{
+            color: black;
+            text-decoration: none;
+        }
+
+        .te:hover{
+            color: darkgreen;
+        }
+
+        .we{
+            margin-top: -10px;
+            margin-left: 120px;
+        }
+        
+        .f{
+            display: flex;
+            margin-top: -20px;
+            margin-left: 120px;
+        }
+        .l{
+            color: #111111;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .l:hover{
+            color: darkgreen;
+        }
+
+        .m{
+            display: flex;
+
+        }
+
+        .m1{
+            
+            
+        }
+
+        .m2{
+            margin-left: 150px;
+            margin-top: -30px;
+
+        }
+
+        .m3{
+            margin-left: 250px;
+            margin-top: -30px;
+        }
+
+        .m21{
+            margin-top: -10px;
+        }
+        
+
+        .ga1{
+            display: flex;
+            margin-top: -10px;
+        }
+
+        .fa{
+            margin-top: -30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topdiv">
+        <div class="Topdivlog">
+            <a href="https://halykbank.kz/">
+                <img class="Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzNE4b8PLErYB_CsrpUlG-i0HYMoZXw8tE6j7r8oplsQ&s">
+            </a>
+        </div>
+        <div class="texptpdo">
+            <div class="topTex">
+                <a href="https://halykbank.kz/" class="linkCl"><h5>Частным клиентам</h5></a>
+
+                <a href="https://halykbank.kz/business" class="linkCl"> <h5 style="color: green;">Бизнесу</h5></a>
+                
+                <a href="https://halykbank.kz/halykclub/page/halyk-club" class="linkCl"> <h5>Halyk club</h5></a>
+                
+                <a href="https://halykbank.kz/knowledge_base" class="linkCl"> <h5>Halyk info</h5></a>
+                
+                <a href="https://halykbank.kz/about/press_center" class="linkCl"> <h5>О банке</h5></a>
+            </div>
+            <div class="colorTextTop">
+            </div>     
+
+            </div>
+
+    </div>
+            <div>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      
+                      <img src="C:\Users\admin\Documents\vebka\Снимок экрана (16).png" style="width:100%">
+                      <div class="text">Лондон, Англия</div>
+                    </div>
+                    <div class="mySlides fade">
+                      
+                      <img src="C:\Users\admin\Documents\vebka\Halyk Bank для Бизнеса - Эквайринг, Тарифы и Многое Другое - Google Chrome 18.12.2022 16_52_46.png" style="width:100%">
+                      <div class="text">Заход солнца в Румынии</div>
+                    </div>
+                    <div class="mySlides fade">
+                      
+                      <img src="C:\Users\admin\Documents\vebka\Halyk Bank для Бизнеса - Эквайринг, Тарифы и Многое Другое - Google Chrome 18.12.2022 16_55_39.png" style="width:100%">
+                      <div class="text">Нью-Йорк, США</div>
+                    </div>
+                    <div class="mySlides fade">
+                      
+                        <img src="C:\Users\admin\Documents\vebka\Фотографии 18.12.2022 16_56_33.png" style="width:100%">
+                        <div class="text">Нью-Йорк, США</div>
+                      </div>
+                      <div class="mySlides fade">
+                      
+                        <img src="C:\Users\admin\Documents\vebka\Фотографии 18.12.2022 16_57_17.png" style="width:100%">
+                        <div class="text">Нью-Йорк, США</div>
+                      </div>
+                      <div class="mySlides fade">
+                      
+                        <img src="C:\Users\admin\Documents\vebka\Запись 18.12.2022 16_58_16.png" style="width:100%">
+                        <div class="text">Нью-Йорк, США</div>
+                      </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  
+                  <br>
+                  <div class="pos">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span>  
+                  </div>
+                </div>
+                  <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                    function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";  
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+                  </script>
+            </div>
+            <div class="ten">
+                <div class="fr">
+                <div class="tenge">
+                    <img src="C:\Users\admin\Documents\vebka\tenge.png" style="height: 35px; width: 50px; position: relative; top: 10px;">
+                    <h4>&emsp;USD464/472</h4>
+                    <h4>&emsp;USD464/472</h4>
+                    <h4>&emsp;USD464/472</h4>
+                </div>    
+
+                    <a href="" class="cur" >Все курсы валют > </a>
+                </div>
+                <div class="imgrm">
+                    <img src="C:\Users\admin\Documents\vebka\1pf.png" class="imgr">
+                    <img src="C:\Users\admin\Documents\vebka\2pf.png" class="imgr">
+                    <img src="C:\Users\admin\Documents\vebka\3pf.png" class="imgr">
+                    <img src="C:\Users\admin\Documents\vebka\4pf.png" class="imgr">
+                </div>
+
+
+            </div>
+            <div class="texdow">
+            <div class="t">
+                <a href="" class="te"><h4>Тарифы</h4></a>
+                <a href="" class="te"><h4>&emsp;&emsp;Документы</h4></a>
+            </div>
+            <div class="m">
+                <div class="m1">
+                    <h5 class="we">
+                        Лицензия на проведение банковских и иных операций и деятельности на рынке<br> ценных
+                        бумаг №1.2.47/230/38/1 от 3 февраля 2020 года выдана Агентством<br> Республики Казахстан
+                        по регулированию и развитию финансового рынка
+                    </h5>
+                </div>
+                <div class="m2">
+                    <h4>Контакты</h4>
+                    <div class="ga1">
+                        <img src="C:\Users\admin\Documents\vebka\ga1.png" style="width: 20px; height: 20px;">
+                        <h4 style="margin-top: 0px;">9595</h4>
+                    </div>
+                </div>
+                <div class="m3">
+                    <h4>Мы в соц. сетях</h4><br>
+                    <div class="fa">
+                        <img src="C:\Users\admin\Documents\vebka\ga2.png">
+                        <img src="C:\Users\admin\Documents\vebka\g3.png">
+                        <img src="C:\Users\admin\Documents\vebka\ga4.png">
+                    </div>
+                </div>
+            </div>
+            <div class="f">
+                <h5>powerred by</h5>
+                <a href="" class="l">&emsp;amphibia</a>
+            </div>
+            </div>
+   
+
+
+</body>
+</html>
