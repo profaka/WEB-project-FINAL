@@ -1,0 +1,106 @@
+.First_list{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+.list{
+    display: flex;
+}
+.Conteiner{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+.First_list li{
+    list-style: none;
+}
+.Ul_first{
+    display: flex;
+}
+.Ul_first.Down{
+    display: contents;
+    nav-down: auto;
+}
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Ul_first li{
+    margin-left: 15px;
+    list-style: none;
+    position: relative;
+    bottom: 20px;
+}
+.Logo{
+    position: relative;
+    top: 12px;
+}
+li{
+    width: 150%;
+}
+.Ul_first a Three{
+    color: black;
+}
+p{
+    font-size: 18px;
+}
+.imgs{
+    background-color: black; 
+    border-radius: 5px; 
+    margin-right: 10px; 
+    width: 150px; 
+    height: 45px;
+}
+.Ab {
+    color: grey;
+    width: 90px;
+}
+a{
+    color: black;
+}
+
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+
+.show {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
