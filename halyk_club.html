@@ -8,125 +8,106 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="script_33.js" defer></script>
     <link rel="stylesheet" href="halyk_club.css">
-    <style>
-        .dropbtn {
-            color: black;
-            padding: 13px;
-            font-size: 13px;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(117, 117, 117, 0.534);
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 3px 5px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown a:hover {
-            background-color: #ddd;
-        }
-
-        .show {
-            display: block;
-        }
-    </style>
+    <script src="halyk_club.js" defer></script>
 </head>
 
 <body>
     <div class="Main">
         <div class="Conteiner">
             <div style="display:flex; height: 95px;">
-                <div class="Logo">
-                    <img src="image/logo_halyk.svg" alt="Logo_Halyk_Bank" width="165px" height="58px">
+                <div class="Logo" style="position: relative; left: 10px;">
+                    <a href="https://halykbank.kz/"><img src="image/logo_halyk.svg" alt="Logo_Halyk_Bank" width="165px"
+                            height="58px"></a>
                 </div>
                 <div class="list">
-                    <div style="width: 100%;">
+                    <div style="width: 100%; position: relative; right: 10px; bottom: 10px;">
                         <ul class="Ul_first">
                             <li>
-                                <a class = "Ab" style="width: 130px;" href="Defalt">Частным клиентам</a>
+                                <a class="Ab" style="width: 130px;" href="https://halykbank.kz/">Частным клиентам</a>
                             </li>
                             <li>
-                                <a class = "Ab" style="width: 65px;" href="Defalt">Бизнесу</a>
+                                <a class="Ab" style="width: 65px;" href="https://halykbank.kz/business">Бизнесу</a>
                             </li>
                             <li>
-                                <a class = "Ab" href="halyk_club.html">Halyk Club</a>
+                                <a class="Ab" href="halyk_club.html">Halyk Club</a>
                             </li>
                             <li>
-                                <a class = "Ab" href="Defalt">Halyk Info</a>
+                                <a class="Ab" href="https://halykbank.kz/knowledge_base">Halyk Info</a>
                             </li>
                             <li>
-                                <a class = "Ab" href="Defalt">О банке</a>
+                                <a class="Ab" href="Defalt">О банке</a>
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div style="position: relative; bottom: 10px;">
                         <ul class="Ul_first">
                             <li>
-                                <a href="Defalt" style="position: relative; bottom: 5px; width: 160px;"> <img src="image/eye.png"
-                                        height="20px" width="20px" style="position:relative; top: 5px;"> Для
-                                    слабовидящих</a>
+                                <p style="width: 170px; position: relative; top: 10px; right: 70px;"><a href="Defalt"
+                                        style="position: relative; bottom: 5px; width: 170px;"> <img src="image/eye.png"
+                                            height="20px" width="20px" style="position:relative; top: 5px;"> Для
+                                        слабовидящих</a></p>
                             </li>
                             <li>
-                                <a href="Defalt" style="position: relative; bottom: 5px; width: 120px;"> <img src="image/geo.png"
-                                        width="18px" height="20px" style="position: relative; top: 5px;"> Банк на
-                                    карте </a>
+                                <p style="width: 130px; position: relative; top: 10px; right: 40px;"><a
+                                        href="https://halykbank.kz/map/atm"
+                                        style="position: relative; bottom: 5px; width: 130px;"> <img src="image/geo.png"
+                                            width="18px" height="20px" style="position: relative; top: 5px;"> Банк на
+                                        карте </a></p>
                             </li>
                             <li>
-                                <a href="Defalt" style="position: relative; bottom: 5px; width: 40px;"> <img src="image/call.png"
-                                        width="18px" height="20px" style="position: relative; top: 5px;"> 7111</a>
+                                <p style="width:50px; position: relative; top: 10px; right: 20px;"><a
+                                        href="https://halykbank.kz/halykclub/page/tel:7111"
+                                        style="position: relative; bottom: 5px; width: 50px;"> <img src="image/call.png"
+                                            width="18px" height="20px" style="position: relative; top: 5px;"><a
+                                            style="position: relative; left: 30px; bottom: 25px;"
+                                            href="https://halykbank.kz/halykclub/page/tel:7111"> 7111</a></a></p>
                             </li>
+
                             <li>
-                                <div class="dropdown">
-                                    <button onclick="myFunction()" class="dropbtn">Рус</button>
-                                    <div id="myDropdown" class="dropdown-content">
-                                        <a href="#">ҚАЗ</a>
-                                        <a href="#">ENG</a>
+                                <div style="position: relative; top: 10px; right: 10px;" class="dropdown">
+                                    <button class="dropbtn">Рус</button>
+                                    <img style="position: relative; left: 60px; bottom: 35px;" src="down_arr.png"
+                                        height="20px" width="20px">
+                                    <div class="dropdown-content">
+                                        <a href="halyk_club.html">Рус</a>
+                                        <a href="https://halykbank.kz/kz/halykclub/page/halyk-club">Қаз</a>
+                                        <a href="https://halykbank.kz/en/halykclub/page/halyk-club">Eng</a>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div style="position: relative; top: 50px; right: 1050px;">
-                        <ul class="Ul_first">
+                    <div style="position: relative; top: 35px; right: 1050px;">
+                        <ul style="position:relative; right: 40px; font-size: 18px;" class="Ul_first">
                             <li>
-                                <a href="Defalt">Партнеры</a>
+                                <a href="https://halykbank.kz/halykclub#!/1501/list">Партнеры</a>
                             </li>
                             <li>
-                                <a href="Defalt">Акции</a>
+                                <a href="https://halykbank.kz/halykclub/promo">Акции</a>
                             </li>
                             <li>
-                                <a href="Defalt" style="width: 110px;">Travel-бонусы</a>
+                                <a href="https://halykbank.kz/halykclub/cards/puteshestviya"
+                                    style="width: 110px;">Travel-бонусы</a>
                             </li>
                             <li>
-                                <a href="Defalt" style="width: 150px;">Что такое Halyk Club</a>
+                                <a href="halyk_club.html" style="width: 170px;">Что такое Halyk Club</a>
                             </li>
                             <li>
-                                <a href="Defalt" style="width: 150px;">Стать партнером</a>
+                                <a href="https://halykbank.kz/halykclub/page/stat-partnerom" style="width: 150px;">Стать
+                                    партнером</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div style="padding-top: 50px;">
+            <div style="padding-top: 30px;">
                 <a href="Defalt" style="color: grey;">Главная</a>/
-                <a href="halyk_club.html">Halyk Club</a>/
+                <a href="halyk_club.html" style="color: grey;">Halyk Club</a>/
                 <a style="color: black;">Что такое Halyk Club</a>
             </div>
             <div>
-                <p style="font-size: 48px;"><b>Что такое Halyk Club</b></p>
+                <p style="font-size: 36px; position: relative; bottom: 10px;"><b>Что такое Halyk Club</b></p>
                 <img src="image/Halyk_bank.jpg" height="380.58px" width="1156px">
             </div>
             <div style="position: relative; top: 50px">
@@ -135,8 +116,11 @@
                     <div style="width: 180px; height: 250px;">
                         <img src="image/Proth_5.svg" height="50" width="50">
                         <p style="position: relative; left: 80px; bottom: 55px; font-size: 18px;">Платите по-новому!</p>
-                        <p style="position: relative; left: 80px; bottom: 40px; font-size: 20px; border: 1px solid green;border-radius: 5px; width: 250px;height: 40px;"> 
-                            <a style="margin-left: 12px ;margin-top: 8px; color: green;" href="Defalt">Все партнеры Halyk Club</a></p>
+                        <p
+                            style="position: relative; left: 80px; bottom: 40px; font-size: 20px; border: 1px solid green;border-radius: 5px; width: 250px;height: 40px;">
+                            <a style="margin-left: 12px ;margin-top: 8px; color: green;"
+                                href="https://halykbank.kz/halykclub#!/1501/list">Все партнеры Halyk Club</a>
+                        </p>
                     </div>
                     <div style="width: 180px; height: 250px; margin: auto;">
                         <img src="image/Proth_B.svg" height="50" width="50">
@@ -157,13 +141,18 @@
                 <p>С нами уже более 20 000 торговых точек Партнеров Halyk Club, из них более 18 000 торговых точек с
                     покупками в рассрочку.</p>
                 <p style="font-size: 20px;"><b>Получайте бонусы с каждой покупки</b></p>
-                <p">6% – минимальный бонус в сети партнеров <a href="Defalt" style="color: green;">Halyk Club</a>
+                <p">6% – минимальный бонус в сети партнеров <a href="https://halykbank.kz/halykclub#!/1501/list"
+                        style="color: green;">Halyk Club</a>
                     (размер бонуса указан с учетом бонуса Партнера и бонуса от Банка в рамках акции «5% бонусов на
-                    бесконтактные платежи в сети Halyk Bank», <a href="Defalt" style="color: green;">имеются
+                    бесконтактные платежи в сети Halyk Bank», <a
+                        href="https://halykbank.kz/storage/app/media/Bonus/RUS_Bonuses_Halyk.pdf"
+                        style="color: green;">имеются
                         исключения</a>)</p>
-                    <p">30% – максимальный бонус в сети партнеров <a href="Defalt" style="color: green;">Halyk Club</a>
+                    <p">30% – максимальный бонус в сети партнеров <a href="https://halykbank.kz/halykclub#!/1501/list"
+                            style="color: green;">Halyk Club</a>
                         (актуальный размер бонуса просим уточнять у партнёров Halyk Club)</p>
-                        <p">10% – максимальный бонус <a href="Defalt" style="color: green;">по специальным программам и
+                        <p">10% – максимальный бонус <a href="https://halykbank.kz/halykclub/promo"
+                                style="color: green;">по специальным программам и
                                 акциям</a></p>
                             <p">5% бонусов на бесконтактные платежи в сети Halyk Bank:</p>
                                 <ul>
@@ -176,7 +165,8 @@
                                     </li>
                                     <p style="font-size: 20px;"><b>1% бонусов:</b></p>
                                     <li>
-                                        <p>на большинство платежей в приложении Halyk Homebank (<a href="Defalt"
+                                        <p>на большинство платежей в приложении Halyk Homebank (<a
+                                                href="https://halykbank.kz/storage/app/media/Bonus/RUS_Bonuses_Halyk.pdf"
                                                 style="color: green;">имеются исключения</a>)</p>
                                     </li>
                                 </ul>
@@ -196,11 +186,14 @@
                                             карты > Заказать карту;</p>
                                     </li>
                                     <li>
-                                        <p>В <a href="Defalt" style="color: green;">любом отделении</a> Halyk Bank за 5
+                                        <p>В <a href="https://halykbank.kz/halykclub#!/1501/list"
+                                                style="color: green;">любом отделении</a> Halyk Bank за 5
                                             минут;</p>
                                     </li>
                                     <li>
-                                        <p>Через <a href="Defalt" style="color: green;">терминалы по выпуску карт</a> за
+                                        <p>Через <a
+                                                href="https://halykbank.kz/map/branch?utm_medium=banner_main&utm_source=halykbank.kz&utm_campaign=qr5bonus"
+                                                style="color: green;">терминалы по выпуску карт</a> за
                                             1 минуту.</p>
                                     </li>
                                 </ul>
@@ -222,7 +215,8 @@
                                     </li>
                                 </ul>
                                 <p><b style="font-size: 20px;">Покупайте в рассрочку</b> <br> По картам Halyk Light Вам
-                                    доступна <a href="Defalt" style="color: green;">рассрочка на 4 месяца без процентов
+                                    доступна <a href="https://halykbank.kz/card/karta-dlya-rassrochki-light"
+                                        style="color: green;">рассрочка на 4 месяца без процентов
                                         и переплаты</a> в сети более 18 000 точек партнеров программы рассрочки.</p>
                                 <p>На покупки картой Halyk Light не в сети партнеров (в POS-терминале других банков)
                                     также действует рассрочка на 4% с ежемесячной комиссией 1% от суммы покупки.</p>
@@ -230,12 +224,17 @@
                                 <p><i>Банк оставляет за собой право в одностороннем порядке менять условия акции, в том
                                         числе приостановить или продлить срок акции без уведомления клиентов</i></p>
                                 <br>
-                                <p style="font-size: 20px;"><a href="Defalt" style="color: green;">ПРАВИЛА БОНУСНОГО
+                                <p style="font-size: 20px;"><a
+                                        href="https://halykbank.kz/storage/app/media/go/Bonuses/RUS_Pravila_FL_052021.pdf"
+                                        style="color: green;">ПРАВИЛА БОНУСНОГО
                                         КЛУБА ДЛЯ ФИЗИЧЕСКИХ ЛИЦ</a></p>
-                                <p><a href="Defalt" style="color: green;">Исключения по начислению бонусов</a></p>
-                                <p><a href="Defalt" style="color: green;">Инструкция по оплате бонусами в POS-терминалах
+                                <p><a href="https://halykbank.kz/storage/app/media/Bonus/RUS_Bonuses_Halyk.pdf"
+                                        style="color: green;">Исключения по начислению бонусов</a></p>
+                                <p><a href="https://halykbank.kz/storage/app/media/Bonus/Ingenico_RUS.jpg"
+                                        style="color: green;">Инструкция по оплате бонусами в POS-терминалах
                                         Ingenico</a></p>
-                                <p><a href="Defalt" style="color: green;">Инструкция по оплате бонусами в POS-терминалах
+                                <p><a href="https://halykbank.kz/storage/app/media/Bonus/PAX_RUS.jpg"
+                                        style="color: green;">Инструкция по оплате бонусами в POS-терминалах
                                         PAX</a></p>
                                 <br>
                                 <br>
@@ -243,8 +242,8 @@
             <div>
                 <div>
                     <div style="display: flex;">
-                        <p style="margin-right: 10px;"><a href="Defalt">Тарифы</a></p>
-                        <p><a href="Defalt">Документы</a></p>
+                        <p style="margin-right: 10px;"><a href="https://halykbank.kz/tariffs">Тарифы</a></p>
+                        <p><a href="https://halykbank.kz/documents">Документы</a></p>
                     </div>
                     <div style="width: 500px;">
                         <p style="font-size: 16px; color: gray;">Лицензия на проведение банковских и иных операций и
@@ -252,53 +251,42 @@
                             ценных бумаг №1.2.47/230/38/1 от 3 февраля 2020 года выдана Агентством
                             Республики Казахстан по регулированию и развитию финансового рынка
                         </p>
-                        <p>powered by <a href="Defalt">amphibia</a></p>
+                        <p>powered by <a href="https://amphibia.kz/">amphibia</a></p>
                     </div>
                 </div>
 
                 <div style="display: flex; position: relative; left: 650px; bottom: 200px;">
-                    <p class="imgs"><img src="appstore.svg"></p>
-                    <p class="imgs"><img src="google.svg"></p>
-                    <p class="imgs"><img src="appgallery.svg"></p>
+                    <p class="imgs"><a href="https://apps.apple.com/us/app/homebank-kz/id440635615"><img
+                                src="appstore.svg"></a></p>
+                    <p class="imgs"><a href="https://play.google.com/store/apps/details?id=kz.kkb.homebank&pli=1"><img
+                                src="google.svg"></a></p>
+                    <p class="imgs"><a
+                            href="https://appgallery.huawei.com/app/C102945379?sharePrepath=ag&locale=ru_RU&source=halykbank.kz"><img
+                                src="appgallery.svg"></a></p>
                     <br>
                     <div style="position: relative; top: 90px; right: 478px;">
                         <p><b>Контакт-центр</b></p>
-                        <a href="Defalt" style="position: relative; bottom: 8px; color: black;"> <img
-                                src="image/call.png" width="18px" height="20px" style="position: relative; top: 5px;">
+                        <a href="https://halykbank.kz/halykclub/page/tel:7111"
+                            style="position: relative; bottom: 8px; color: black;"> <img src="image/call.png"
+                                width="18px" height="20px" style="position: relative; top: 5px;">
                             7111
                         </a>
                     </div>
                     <div style="position: relative; top: 90px; right: 400px;">
                         <p><b>Мы в соц. сетях</b></p>
                         <div style="display: flex; position: relative; bottom: 5px;">
-                            <a href="Defalt" style="margin-right: 10px;"><img src="facebook.png" height="25"
+                            <a href="https://www.facebook.com/halykbank/" style="margin-right: 10px;"><img
+                                    src="facebook.png" height="25" width="25"></a>
+                            <a href="https://www.instagram.com/halykbank.kz/" style="margin-right: 10px;"><img
+                                    src="instagram.png" height="25" width="25"></a>
+                            <a href="https://twitter.com/halykbank_kz"><img src="твиттер.png" height="25"
                                     width="25"></a>
-                            <a href="Defalt" style="margin-right: 10px;"><img src="instagram.png" height="25"
-                                    width="25"></a>
-                            <a href="Defalt"><img src="твиттер.png" height="25" width="25"></a>
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
-        <script>
-            function myFunction() {
-                document.getElementById("myDropdown").classList.toggle("show");
-            }
-            window.onclick = function (event) {
-                if (!event.target.matches('.dropbtn')) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                        }
-                    }
-                }
-            }
-        </script>
 </body>
 
 </html>
