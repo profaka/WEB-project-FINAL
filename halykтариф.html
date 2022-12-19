@@ -15,6 +15,7 @@
         .topTex{
             display: flex;
             margin: 0 -160px;
+            margin-left: -550px;
         }
         .colorBack{
             background-color: white;
@@ -28,7 +29,7 @@
             color: black;
             display: flex;      
             margin-top: 20px;
-            margin-left: -275px;
+            margin-left: -460px;
             position: relative;
             display: inline-block;
         }
@@ -62,64 +63,145 @@
             text-decoration: none;
         }
 
-        .g1{
-            color: gray;
-            text-decoration: none;
-        }
 
-        .g1:hover{
-            color: green;
+        * {
+            box-sizing: border-box
         }
+        body {
+            font-family: Verdana, sans-serif;
+            margin:0
+        }
+        .mySlides {
+            display: none
+        }
+        img {
+            vertical-align: middle;
+        }
+        .slideshow-container {
+            width: 1535px;
+            height: 400px;
+            margin-top: 20px;
+        }
+        /* Кнопки next & previous*/
+        .prev, .next {            
+            cursor: pointer;
+            position: relative; left: 25px; top: -220px; 
+            width: 100px;
+            height: 50px;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 70px;
+            border-radius: 50px;
+            padding: 18px;
+            margin-top: -22px;
+            color: black;
+            font-weight: bold;
+            background-color: white;
+            font-size: 22px;
+            transition: 0.6s ease;
+            user-select: none;
 
-        .g2{
-            display: flex; 
-            margin-left: 180px;   
         }
-
-        .g4{
-            color: gray;
-            text-decoration: none;
+        /* Измените положение "next button" */
+        .next {
+            right: 0;
+            position: relative; left: 1400px; top: -220px;
         }
-
-        .g4:hover{
-            color: green;
+        /* Добавьте черный фоновый цвет с небольшой прозрачностью*/
+        .prev:hover, .next:hover {
+            background-color: white
         }
-        .g5{
-            color: green;
-            margin-left: 30px;
+        /* Подпись под изображением */
+        .text {
+            color: #ffffff;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
         }
         
-        .g6{
-            display: flex;
-            margin-left: 180px;
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #999999;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
         }
-        .g7{
-            color: darkgray;
+        .active, .dot:hover {
+            background-color: #111111;
+        }
+        /* Выцветание анимации */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        } 
+        to {
+            opacity: 1
+        }
+        }
+        @keyframes fade {
+        from {
+            opacity: .4
+        } 
+        to {
+            opacity: 1
+        }
+        }
+        /* Для маленьких экранов увеличьте размер текста */
+        @media only screen and (max-width: 300px) {
+        .prev, .next,.text {
+            font-size: 11px
+        }
+        }
+        .pos{
+            position: relative; left: 683px; top: -59px;
+        }
+        
+        .ten{
+            margin-top: 50px;
+            margin-left: 150px;
+        }
+        .cur{
+            position: relative; top: 22px; right: 300px;
+            color: darkgreen;
             text-decoration: none;
         }
-
-        .g7:hover{
+        .cur:hover{
             color: green;
         }
-
-        .g8{
-            display: flex;
-            margin-left: 180px;
-        }
-
-        .k{
-            margin-left: 100px;
-        }
-
-        .k1{
-            margin-left: 180px;
-        }
-
         
+        .imgr{
+            margin-top: 50px;
+            width: 300px;
+            height: 400px;
+            margin: 15px;
+        }
+        .imgrm{
+            display: flex;
+            margin-left: -50px;
+        }
+        .fr{
+            display: flex;
+        }
+        .tenge{
+            display: flex;
+            margin-left: -40px;
+        }
+
+
         .texdow{
             background-color: snow;
-            margin-left: 50px;
-
+            margin-left: -50px;
         }
         
         .t{
@@ -191,6 +273,130 @@
             margin-top: -30px;
         }
 
+        header {
+			display: flex;
+			justify-content: flex-end;
+		}
+		.menu-btn {
+			width: 30px;
+			height: 30px;
+			position: relative;
+			z-index:5;
+			overflow: hidden;
+		}
+
+		.menu-btn span {
+			width: 30px;
+			height: 2px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: black;
+			transition: all .0s;
+		}
+
+		.menu-btn span:nth-of-type(2) {
+			top: calc(50% - 5px);
+		}
+		.menu-btn span:nth-of-type(3) {
+			top: calc(50% + 5px);
+		}
+		.menu-btn.active span:nth-of-type(1) {
+		display: none;
+		}
+		.menu-btn.active span:nth-of-type(2) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(45deg);  
+		}
+		.menu-btn.active span:nth-of-type(3) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(-45deg); 
+		}
+		.menu {
+			position: fixed;
+			z-index: 3;
+			top: 0;
+			left: 50%;
+			width: 50%;
+			height: 100%;
+			padding: 15px;
+		background: #ffffff;
+			transform: translateX(200%);
+			transition: transform 0.5s; 
+		}
+
+		.menu.active {
+			transform: translateX(0);
+		}
+
+		.menu li {
+			list-style-type: none;
+			margin-top: 15px;
+		}
+        .header-logo{
+			max-width: 15%;
+			margin-top: 1%;
+		}
+        .page {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 1300px;
+			padding: 0 15px;
+			display: flex;
+			align-content: flex-start;
+			flex-wrap: wrap;
+  			justify-content: center;
+		}
+        a{
+			color: black;
+			text-decoration: none;
+		}
+		a:hover{
+			color: rgb(5 158 119);
+		}
+		div {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			position: relative;
+			display: block;
+		}
+		
+        .nav_text{
+			color: gray;
+			font-size: 10pt;
+			text-decoration: none;
+		}
+		.nav_text:hover{
+			color: rgb(5 158 119);
+		}
+		.nav_text2{
+            margin-left: 50px;
+			color: rgb(10, 10, 10);
+			text-decoration: none;
+		}
+		.nav_text2:hover{
+			color: rgb(5 158 119);
+		}
+		.nav:hover{
+			color:rgb(0, 0, 0);
+		}
+        .header-text-one{
+			display: flex;
+		}
+        .ttt{
+			display: flex; margin-top: 1%; margin-left: 1%;
+		}
+        
+		.nav{
+			margin-top: 1%;
+			margin-left: 1%;
+			font-size: 12pt;
+			overflow: auto;
+			
+		}
+
     </style>
     </head>
     <body>
@@ -213,12 +419,340 @@
                     <a href="https://halykbank.kz/about/press_center" class="linkCl"> <h5>О банке</h5></a>
                 </div>
                 <div class="colorTextTop">
-                </div>     
-    
-                </div>
 
-    
-        </div>
+
+                    <div class="colorTextTop">
+                        <div style="display: flex;">               
+                           <a class="nav_text2" href="https://halykbank.kz/homebank">
+                                <span id = "online">
+                                   Onlinebank
+                               </span>
+                           </a>
+                           <a class="nav_text2" href="https://halykbank.kz/promo">
+                               <span id="Open">
+                                   <div style="display: flex; margin-top: -15px;">
+                                       <p>Открыть</p> <p style="margin-top: -3px; margin-left: 10px;">&emsp;счёт</p>
+                                   </div>
+                               </span>
+                           </a>
+                           <a class="nav_text2" href="https://halykbank.kz/credits">
+                               <span id="credits">
+                                   Карты
+                               </span>
+                                   </a>
+                                               <a class="nav_text2" href="https://halykbank.kz/market">
+                                                   <span id="Garant">
+                                                       Гарантий  
+                                                   </span>  
+                                               </a>
+                                               <a class="nav_text2" href="https://halykbank.kz/instalments">
+                                                   <span id="instalments">
+                                                       Кредиты
+                                                   </span>
+                                               </a>
+                                               <a class="nav_text2" href="https://halykbank.kz/cards">
+                                                   <span id="cards">
+                                                       Эквайринг
+                                                   </span>
+                                               </a>
+                                               <a class="nav_text2" href="https://halykbank.kz/deposits">
+                                                   <span id="deposite">
+                                                       Вклады
+                                                   </span>
+                                               </a>
+                                               <a class="nav_text2" href="https://halykbank.kz/transfers">
+                                                   <span id="transfers">
+                                                       Сервисы
+                                                   </span>
+                                               </a>
+                                              
+                                         
+                                          
+                                           
+                                       </div>
+                                   </div>
+                                   
+                                   
+                               </div>
+                           </div>
+                           <div class="main">
+       
+                               <div id="onlineSlide" style="display: none; padding: 5px;">
+                                   <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                                       <div style="margin:1% ;">
+                                           <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                               <strong>Online bank</strong> 
+                                           </div> 
+                                           <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                               <strong>Мобильное приложение</strong> 
+                                           </div> 
+                                       </div>
+                                       <div style="margin:1% ;">
+                                           <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                               <strong>
+                                                   Победители акции «Авто для<br> бизнеса»</strong> 
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               
+                               <div id="creditsSlide" style="display: none; padding: 5px;">
+                                   <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                                       <div style="margin:1% ;">
+                                           <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                               <strong>Цифровая карта</strong> 
+                                           </div> 
+                                           <p>Цифровая карта</p>
+                                           <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                               <strong>Карта для ИП</strong> 
+                                           </div> 
+                                           <p>
+                                               Карта для ИП
+                                           </p>
+                                           
+                                       </div>
+                                       <div style="margin:1% ;">
+                                           <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                               <strong>Для бизнеса</strong> 
+                                           </div>
+                                           <p>
+                                               Карты для бизнеса
+                                           </p>
+                                           <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                               <strong>Таможенная карта</strong> 
+                                           </div>
+                                           <p>
+                                               Таможенная карта
+                                           </p>
+                                          
+                                       </div>
+                                       <div style="margin:1% ;">
+                                           <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                               <strong>Карта самоинкассации</strong> 
+                                           </div>
+                                           <p>
+                                               Карта самоинкассации
+                                           </p>
+                                           <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                               <strong>Карта для сотрудников</strong> 
+                                           </div>
+                                           <p>
+                                               Карта для сотрудников
+                                           </p>
+                                       </div>
+                                   </div>
+                           </div>
+                           <div id="instalmentsSlide" style="display: none; padding: 5px;">
+                               <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                           <strong>Карта рассрочки Halyk Light</strong> 
+                                       </div> 
+                                       <p>Карта рассрочки Halyk Light</p>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                           <strong>Рассрочка в магазинах</strong> 
+                                       </div> 
+                                       <p>
+                                           Онлайн-рассрочка в Chocomart <br>
+                                           Онлайн-рассрочка в магазинах Fora.kz <br>
+                                           Онлайн-рассрочка в торговом доме Кама-Казахстан <br>
+                                           Онлайн-рассрочка в Formula 7 <br>
+                                           Онлайн-рассрочка в Viled <br>
+                                       </p>
+                                   </div>
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                           <strong>Онлайн-рассрочка</strong> 
+                                       </div> 
+                                       <p>
+                                           Онлайн-рассрочка в Halyk Tour <br>
+                                           Онлайн-рассрочка в Halyk Travel <br>
+                                           Онлайн-рассрочка в Technodom <br>
+                                           Онлайн-рассрочка в Sulpak <br>
+                                           Онлайн-рассрочка в Mechta.kz <br>
+                                           Онлайн-рассрочка в Alser <br> 
+                                           Онлайн-рассрочка в Evrika<br>
+                                           Онлайн-рассрочка в магазинах iSpace <br>
+                                           Онлайн-рассрочка в MARWIN <br>
+                                           Онлайн-рассрочка в Vlife <br> <br>
+                                       </p>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                           <strong>Homebank Рассрочка</strong> 
+                                       </div> 
+                                       <p>
+                                           Homebank Рассрочка
+                                       </p>
+                                   </div>
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                           <strong>Homebank Рассрочка</strong> 
+                                       </div> 
+                                       <p>
+                                           Homebank Рассрочка
+                                       </p>
+                                   </div>
+                               </div>
+                           </div>
+                           
+                           <div id="depositeSlide" style="display: none; padding: 5px;">
+                               <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Вклады</strong>
+                                       </div>
+                                       <p style="margin-top: -130px;">Вклад «Срочный»<br>
+                                           Вклад «Гибкий»<br>
+                                           Вклад «Накопительный»
+                                       </p> 
+       
+                                   </div>
+                                   
+                                   
+                               </div>
+                           </div>
+                           <div id="transfersSlide" style="display: none; padding: 5px;">
+                               <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Внешняя экономическая деятельность</strong> 
+                                       </div> 
+                                       <p>Внешняя экономическая деятельность</p>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Кастодиальная деятельность</strong> 
+                                       </div> 
+                                       <p>Кастодиальная деятельность</p>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Становитесь партнером Halyk Market!</strong> 
+                                       </div> 
+                                       <p>Становитесь партнером Halyk Market!</p>
+                                   </div>
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Транзакционное обслуживание</strong> 
+                                       </div>
+                                       <P>Торговое и структурное финансирование<br>
+                                           Управление денежными потоками<br>
+                                           Агентские услуги по приему платежей<br>
+                                           Qprint/АПС-печать</P>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Платежная система</strong> 
+                                       </div>
+                                       <p>Платежная система
+                                       </p>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Онлайн сервис передачи финансовой отчётности</strong> 
+                                       </div>
+                                       <p>Онлайн сервис передачи финансовой<br> отчётности</p>
+                                   </div>
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Корреспондентские отношения</strong> 
+                                       </div>
+                                       <p>Корреспондентские отношения
+                                       </p>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Продукты казначейства</strong> 
+                                       </div>
+                                       <p>Брокерское обслуживание<br>
+                                           Конверсионные операции<br>
+                                           Банкнотные операции<br>
+                                           Межбанковские кредиты и депозиты<br>
+                                           Производные инструменты</p>
+                                       
+                                   </div>
+                               </div>
+                           </div>
+                           <div id="othersSlide" style="display: none; padding: 5px;">
+                               <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Halyk Private</strong> 
+                                       </div> 
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Золото</strong> 
+                                       </div> 
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Кассовые услуги</strong> 
+                                       </div> 
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Halyk Invest</strong> 
+                                       </div> 
+                                   </div>
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Выплаты ЕПВ из ЕНПФ</strong> 
+                                       </div>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Металлические счета</strong> 
+                                       </div>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Голосовая биометрия</strong> 
+                                       </div>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Страховая компания «Халык»</strong> 
+                                       </div>
+                                   </div>
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Сейфовые ячейки</strong> 
+                                       </div>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>Трансфер-агентские услуги</strong> 
+                                       </div>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                                           <strong>100% бонусов за коммунальные платежи</strong> 
+                                       </div>
+                                       
+                                   </div>
+                               </div>
+                           </div>
+       
+       
+       
+                           <div id="OpenSlide" style="display: none; padding: 5px;">
+                               <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                           <strong>Открыть счёт для ИП</strong> 
+                                       </div> 
+                                       <p>
+                                           Открыть счёт для ИП
+                                       </p>
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                           <strong>Открыть счёт для ТОО</strong> 
+                                       </div> 
+                                       <p>
+                                           Открыть счёт для ТОО
+                                       </p>
+                                   </div>
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                           <strong>Регистрация ИП онлайн</strong> 
+                                       </div> 
+                                       <p>
+                                           Зарегестрируйте ИП онлайн
+                                       </p>
+                                      
+                                   </div>
+                                   <div style="margin:1% ;">
+                                       <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                                           <strong>Тарифные пакеты для малого<br> среднего биснеса</strong> 
+                                       </div> 
+                                       <p>
+                                           Пакет Salem – Лёгкий старт<br>
+                                           Пакет Drive - бизнес на драйве<br>
+                                           Пакет Tender - гарантия успеха<br>
+                                           Пакет Alem - мир и соседи<br>
+                                           Пакет Econom - экономия в действии
+                                       </p>
+                                       
+                                   </div>
+                               </div>
+                           </div>
+                           </div>
+                       </div>
+                   
+                
         <div class="g2">
             <a href=""><h4 class="g1">Главная</h4></a><h4>/Тарифы</h4>
         </div>
@@ -370,7 +904,128 @@
             </div>
             </div>
    
+            <script>
+                window.onload = function () {
+  var a = document.querySelector('#credits');
+  var b = document.querySelector('#Open');
+  var c = document.querySelector('#online');
+  var d = document.querySelector('#deposite');
+  var f = document.querySelector('#transfers');
+                    
+  a.onmouseout = function(e) {
+    document.getElementById('creditsSlide').style.display='none'; 
+    document.getElementById('slide').style.display='block';
+    document.getElementById('scrollNumber').style.display='block';
+  }
+  a.onmouseover = function(e) {
+    document.getElementById('creditsSlide').style.display='block'; 
+    document.getElementById('slide').style.display='none'; 
+    document.getElementById('scrollNumber').style.display='none';
+  };
+  b.onmouseout = function(e) {
+    document.getElementById('OpenSlide').style.display='none'; 
+    document.getElementById('slide').style.display='block';
+    document.getElementById('scrollNumber').style.display='block';
+  }
+  b.onmouseover = function(e) {
+    document.getElementById('OpenSlide').style.display='block'; 
+    document.getElementById('slide').style.display='none'; 
+    document.getElementById('scrollNumber').style.display='none';
+  };
+  c.onmouseout = function(e) {
+    document.getElementById('onlineSlide').style.display='none'; 
+    document.getElementById('slide').style.display='block';
+    document.getElementById('scrollNumber').style.display='block';
+  }
+  c.onmouseover = function(e) {
+    document.getElementById('onlineSlide').style.display='block'; 
+    document.getElementById('slide').style.display='none'; 
+    document.getElementById('scrollNumber').style.display='none';
+  };
+  d.onmouseout = function(e) {
+    document.getElementById('depositeSlide').style.display='none'; 
+    document.getElementById('slide').style.display='block';
+    document.getElementById('scrollNumber').style.display='block';
+  }
+  d.onmouseover = function(e) {
+    document.getElementById('depositeSlide').style.display='block'; 
+    document.getElementById('slide').style.display='none'; 
+    document.getElementById('scrollNumber').style.display='none';
+  };
+  
+  f.onmouseout = function(e) {
+    document.getElementById('transfersSlide').style.display='none'; 
+    document.getElementById('slide').style.display='block';
+    document.getElementById('scrollNumber').style.display='block';
+  }
+  f.onmouseover = function(e) {
+    document.getElementById('transfersSlide').style.display='block'; 
+    document.getElementById('slide').style.display='none'; 
+    document.getElementById('scrollNumber').style.display='none';
+  };
+  g.onmouseout = function(e) {
+    document.getElementById('othersSlide').style.display='none'; 
+    document.getElementById('slide').style.display='block';
+    document.getElementById('scrollNumber').style.display='block';
+  }
+  g.onmouseover = function(e) {
+    document.getElementById('othersSlide').style.display='block'; 
+    document.getElementById('slide').style.display='none'; 
+    document.getElementById('scrollNumber').style.display='none';
+  };
+  r.onmouseout = function(e) {
+    document.getElementById('onlineSlide').style.display='none'; 
+  }
+  r.onmouseover = function(e) {
+    document.getElementById('onlineSlide').style.display='block'; 
+  };
+  h.onmouseout = function(e) {
+    document.getElementById('instalmentsSlide').style.display='none'; 
+    document.getElementById('slide').style.display='block';
+    document.getElementById('scrollNumber').style.display='block';
+  }
+  h.onmouseover = function(e) {
+    document.getElementById('instalmentsSlide').style.display='block'; 
+  };
+  k.onmouseout = function(e) {
+    document.getElementById('GarantSlide').style.display='none'; 
+    document.getElementById('slide').style.display='block';
+    document.getElementById('scrollNumber').style.display='block';
+  }
+  k.onmouseover = function(e) {
+    document.getElementById('GarantSlide').style.display='block'; 
+    document.getElementById('slide').style.display='none'; 
+    document.getElementById('scrollNumber').style.display='none';
+  };
 
+}
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+              </script>
         
     </body>
     </html>
