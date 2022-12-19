@@ -31,4 +31,3 @@ menuClose2.addEventListener('click', function () {
     menuOpen2.style.display = 'block';
     menuClose2.style.display = 'none';
 });
-
