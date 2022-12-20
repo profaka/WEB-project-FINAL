@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Credit</title>
+    <style>
+        header {
+			display: flex;
+			justify-content: flex-end;
+		}
+		.menu-btn {
+			width: 30px;
+			height: 30px;
+			position: relative;
+			z-index:5;
+			overflow: hidden;
+		}
+
+		.menu-btn span {
+			width: 30px;
+			height: 2px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: rgb(194, 0, 0);
+			transition: all .0s;
+		}
+
+		.menu-btn span:nth-of-type(2) {
+			top: calc(50% - 5px);
+		}
+		.menu-btn span:nth-of-type(3) {
+			top: calc(50% + 5px);
+		}
+		.menu-btn.active span:nth-of-type(1) {
+		display: none;
+		}
+		.menu-btn.active span:nth-of-type(2) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(45deg);  
+		}
+		.menu-btn.active span:nth-of-type(3) {
+		top: 50%;
+		transform: translate(-50%, 0%) rotate(-45deg); 
+		}
+		.menu {
+			position: fixed;
+			z-index: 3;
+			top: 0;
+			left: 50%;
+			width: 50%;
+			height: 100%;
+			padding: 15px;
+		background: #ffffff;
+			transform: translateX(200%);
+			transition: transform 0.5s; 
+		}
+
+		.menu.active {
+			transform: translateX(0);
+		}
+
+		.menu li {
+			list-style-type: none;
+			margin-top: 15px;
+		}
+        .header-logo{
+			max-width: 15%;
+			margin-top: 1%;
+		}
+        .page {
+			margin: 0 auto;
+			width: 100%;
+			max-width: 1300px;
+			padding: 0 15px;
+			display: flex;
+			align-content: flex-start;
+			flex-wrap: wrap;
+  			justify-content: center;
+		}
+        a{
+			color: black;
+			text-decoration: none;
+		}
+		a:hover{
+			color: rgb(5 158 119);
+		}
+		div {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			position: relative;
+			display: block;
+		}
+		div img {
+			width: 100%;
+			height: auto;
+			display:
+             block;
+		}
+        .nav_text{
+			color: gray;
+			font-size: 10pt;
+			text-decoration: none;
+		}
+		.nav_text:hover{
+			color: rgb(5 158 119);
+		}
+		.nav_text2{
+			color: rgb(10, 10, 10);
+			text-decoration: none;
+		}
+		.nav_text2:hover{
+			color: rgb(5 158 119);
+		}
+		.nav:hover{
+			color:rgb(0, 0, 0);
+		}
+        .header-text-one{
+			display: flex;
+		}
+        .ttt{
+			display: flex; margin-top: 1%; margin-left: 1%;
+		}
+        
+		.nav{
+			margin-top: 1%;
+			margin-left: 1%;
+			font-size: 12pt;
+			overflow: auto;
+			
+		}
+        .main-header {
+        opacity: 0;
+        animation: ani 2.5s forwards;
+        }
+        #iphonerek{
+            width: 25%; margin-left: 10%;
+        }
+        #mobile{
+            padding:5%; width: 50%;
+        }
+        #setup{
+            text-align: center;
+        }
+        #creditpogashen{
+            display: flex; flex-wrap: wrap;
+        }
+        #creditpogashenimg{
+            width: 45%;
+        }
+        #creditpogashentext{
+            width: 45%;
+        }
+        #endimg{
+            background-color: black; width: 50%; border-radius: 10px;
+        }
+        
+
+        @keyframes ani {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+        }
+        @media screen and (max-width: 770px) {
+            #iphonerek{
+                width: 70%;
+            }
+            #mobile{
+                margin: 5%;
+            }
+            #creditpogashenimg{
+                width: 80%;
+                margin: 10%;
+            }
+            #creditpogashentext{
+                margin: 10%;
+                max-width: 80%;
+            }
+            .menu-btn span{
+				background-color: #717171;
+				color: #717171;
+			}
+            .nav{
+				display: none;
+			}
+            #endimg{
+                width: 100%;
+            }
+
+  		}	
+        
+		.end{
+			display: flex;
+			background-color: rgb(249, 248, 248);
+			font-size: 10pt;
+			padding: 2%;
+		}
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="header-text-one">
+                <div class="header-logo">
+                    <a href="Main_page.html">
+                    <img src="https://halykbank.kz/themes/halyk/assets/images/logo.svg" alt="halykbank.kz" class="headers-logo">
+                    </a>
+                </div>
+                <div>
+                    <div class="ttt">
+                        <div>
+                                <nav class="nav">
+                                    <a class="nav_text" href="Main_page.html">Частным клиентам</a>
+                                    <a class="nav_text" href="halyk_bussness.html">Бизнесу</a>
+                                    <a class="nav_text" href="halyk_club.html">Halyk Club</a>
+                                    <a class="nav_text" href="https://halykbank.kz/knowledge_base">Halyk Info</a>
+                                    <a class="nav_text" href="o_banke.html">О банке</a>
+                                </nav>
+                                
+                        </div>	
+                        
+                        <div>
+                            <nav class="nav" style="text-align: right;">
+                                <a class="nav_text"  href="https://halykbank.kz/map/atm">Банк на карте</a>
+                                <a class="nav_text"  href="tel:7111">Телефон</a>
+                            </nav>
+                            
+                        
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <nav class="nav">
+                            <a class="nav_text2" href="https://halykbank.kz/homebank">Home bank</a>
+                            <a class="nav_text2" href="https://halykbank.kz/promo">Акций</a>
+                            <a class="nav_text2" href="https://halykbank.kz/credits">
+                                <span id="credits">
+                                    Кредиты
+                                </span>
+                                </a>
+                            <a class="nav_text2" href="https://halykbank.kz/market">
+                                Маркет
+                            </a>
+                            <a class="nav_text2" href="https://halykbank.kz/instalments">
+                                <span id="instalments">
+                                    Рассрочка
+                                </span>
+                            </a>
+                            <a class="nav_text2" href="https://halykbank.kz/cards">
+                                <span id="cards">
+                                    Карта
+                                </span>
+                            </a>
+                            <a class="nav_text2" href="https://halykbank.kz/deposits">
+                                <span id="deposite">
+                                    Депозиты
+                                </span>
+                            </a>
+                            <a class="nav_text2" href="https://halykbank.kz/transfers">
+                                <span id="transfers">
+                                    Переводы
+                                </span>
+                            </a>
+                            <a class="nav_text2" href="https://halykbank.kz/others">
+                                <span id="others">
+                                    Другое
+                                </span>
+                            </a>
+                        </nav>
+                        <header>
+                            <div class="menu-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </header>
+                        
+                        <div class="menu">
+                            <nav>
+                            <ul>
+                              <li><a class="nav_text2" href="Main_page.html">Частным клиентам</a></li>
+                              <li><a class="nav_text2" href="halyk_bussness.html">Бизнесу</a></li>
+                              <li><a class="nav_text2" href="halyk_club.html">Halyk Club</a></li>
+                              <li><a class="nav_text2" href="https://halykbank.kz/knowledge_base">Halyk Info</a></li>
+                              <li><a class="nav_text2" href="o_banke.html">О банке</a></li>
+                              <li><a class="nav_text2" href="https://halykbank.kz/homebank">Home bank</a></li>
+                              <li><a class="nav_text2" href="https://halykbank.kz/promo">Акций</a></li>
+                              <li><a class="nav_text2" href="https://halykbank.kz/credits">
+                                <span id="credits">
+                                    Кредиты
+                                </span>
+                                </a></li>
+                              <li><a class="nav_text2" href="https://halykbank.kz/market">
+                                Маркет
+                            </a></li>
+                              <li><a class="nav_text2" href="https://halykbank.kz/instalments">
+                                <span id="instalments">
+                                    Рассрочка
+                                </span>
+                            </a></li>
+                              <li><a class="nav_text2" href="https://halykbank.kz/cards">
+                                <span id="cards">
+                                    Карта
+                                </span>
+                            </a></li>
+                              <li>
+                                <a class="nav_text2" href="https://halykbank.kz/deposits">
+                                    <span id="deposite">
+                                        Депозиты
+                                    </span>
+                                </a></li>
+                                <li>
+                                    <a class="nav_text2" href="https://halykbank.kz/others">
+                                        <span id="others">
+                                            Другое
+                                        </span>
+                                    </a></li>
+                            </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="main">
+            <div id="creditsSlide" style="display: none; padding: 5px;">
+                <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Информация по кредитам для клиентов Сбербанк</strong> 
+                        </div> 
+                        <p>Информация по кредитам для клиентов Сбербанк</p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Ипотека</strong> 
+                        </div> 
+                        <p>
+                            Первичное жилье от BAZIS-A <br>
+                            Первичное жилье от BI Group <br>
+                            Ипотека <br>
+                            «7-20-25» <br>
+                            Halyk Sale <br>
+                        </p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Урегулирование проблемной задолженности</strong> 
+                        </div> 
+                        <p>
+                            Урегулирование проблемной задолженности
+                        </p>
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Онлайн кредит</strong> 
+                        </div>
+                        <p>
+                            Онлайн-кредит в Halyk Homebank <br>
+                            Онлайн-кредит в Air Astana <br>
+                            Онлайн-кредит на авиабилеты FlyArystan <br>
+                        </p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Рассрочка на подведение газа</strong> 
+                        </div>
+                        <p>
+                            Рассрочка на подведение газа Нур-Султан <br>
+                            Рассрочка на подведение газа Алматы <br>
+                        </p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Победители розыгрыша квартир</strong> 
+                        </div>
+                        <p>
+                            Победители розыгрыша квартир
+                        </p>
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Кредиты наличными</strong> 
+                        </div>
+                        <p>
+                            Рефинансирование<br>
+                            До 7 000 000 ₸ кредит без залога <br>
+                            Под залог депозита <br>
+                            На неотложные нужды <br>
+                        </p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Автокредит</strong> 
+                        </div>
+                        <p>
+                            Автокредит без залога <br>
+                            Автокредит льготный (новая программа от ФРП) <br>
+                            Автокредит в салонах-партнерах <br>
+                            Автокредит стандартный <br>
+                            Автокредит льготный (БРК) <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="instalmentsSlide" style="display: none; padding: 5px;">
+                <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Карта рассрочки Halyk Light</strong> 
+                        </div> 
+                        <p>Карта рассрочки Halyk Light</p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Рассрочка в магазинах</strong> 
+                        </div> 
+                        <p>
+                            Онлайн-рассрочка в Chocomart <br>
+                            Онлайн-рассрочка в магазинах Fora.kz <br>
+                            Онлайн-рассрочка в торговом доме Кама-Казахстан <br>
+                            Онлайн-рассрочка в Formula 7 <br>
+                            Онлайн-рассрочка в Viled <br>
+                        </p>
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Онлайн-рассрочка</strong> 
+                        </div> 
+                        <p>
+                            Онлайн-рассрочка в Halyk Tour <br>
+                            Онлайн-рассрочка в Halyk Travel <br>
+                            Онлайн-рассрочка в Technodom <br>
+                            Онлайн-рассрочка в Sulpak <br>
+                            Онлайн-рассрочка в Mechta.kz <br>
+                            Онлайн-рассрочка в Alser <br> 
+                            Онлайн-рассрочка в Evrika<br>
+                            Онлайн-рассрочка в магазинах iSpace <br>
+                            Онлайн-рассрочка в MARWIN <br>
+                            Онлайн-рассрочка в Vlife <br> <br>
+                        </p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Homebank Рассрочка</strong> 
+                        </div> 
+                        <p>
+                            Homebank Рассрочка
+                        </p>
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Homebank Рассрочка</strong> 
+                        </div> 
+                        <p>
+                            Homebank Рассрочка
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="cardsSlide" style="display: none; padding: 5px;">
+                <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Дебетовые карты</strong> 
+                        </div> 
+                        <p>
+                            Цифровая карта Halyk Bonus Digital <br>
+                            Halyk Bonus <br>
+                            Цифровая карта Sinooil Digital <br>
+                            Black Card <br>
+                            Diamond Card <br>
+                            Специальная карта для пособий <br>
+                            Карта для нерезидентов <br>
+                            Карта Halyk Easy <br>
+                        </p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Бесплатная доставка</strong> 
+                        </div> 
+                        <p>
+                            Бесплатная доставка
+                        </p>
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Кредитные карты</strong> 
+                        </div> 
+                        <p>
+                            My!Card  <br>
+                            American Express White  <br>
+                            American Express Blue  <br>
+                            American Express Gold  <br>
+                            American Express Platinum  <br>
+                        </p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Заявка по банкоматам и терминалам</strong> 
+                        </div> 
+                        <p>
+                            Заявка по банкоматам и терминалам
+                        </p>
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Оплата смартфоном</strong> 
+                        </div> 
+                        <p>
+                            Google Pay  <br>
+                            Apple Pay  <br>
+                            Samsung Pay  <br>
+                        </p>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Полезное о картах</strong> 
+                        </div> 
+                        <p>
+                            3D Secure  <br>
+                            Доверенный номер  <br>
+                            Установка и смена PIN кода  <br>
+                            Push-уведомления  <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="depositeSlide" style="display: none; padding: 5px;">
+                <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Депозиты онлайн</strong> 
+                        </div> 
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>10% компенсация на депозиты в тенге</strong> 
+                        </div> 
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Образовательный вклад AQYL</strong> 
+                        </div>
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216);">
+                            <strong>Гарантирование депозитов</strong> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div id="transfersSlide" style="display: none; padding: 5px;">
+                <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>На номер телефона</strong> 
+                        </div> 
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Western Union Online</strong> 
+                        </div> 
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Переводы в Узбекистан</strong> 
+                        </div> 
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>На карты</strong> 
+                        </div>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Золотая Корона</strong> 
+                        </div>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Переводы по Face ID и Touch ID в Halyk Homebank</strong> 
+                        </div>
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>На счет</strong> 
+                        </div>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>MoneyGram</strong> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="othersSlide" style="display: none; padding: 5px;">
+                <div style="border-bottom: #717171; height: 25rem; width: 100%; display: flex;">
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Halyk Private</strong> 
+                        </div> 
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Золото</strong> 
+                        </div> 
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Кассовые услуги</strong> 
+                        </div> 
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Halyk Invest</strong> 
+                        </div> 
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Выплаты ЕПВ из ЕНПФ</strong> 
+                        </div>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Металлические счета</strong> 
+                        </div>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Голосовая биометрия</strong> 
+                        </div>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Страховая компания «Халык»</strong> 
+                        </div>
+                    </div>
+                    <div style="margin:1% ;">
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Сейфовые ячейки</strong> 
+                        </div>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>Трансфер-агентские услуги</strong> 
+                        </div>
+                        <div style="border-bottom: 3px solid rgb(221, 216, 216); margin-bottom: 10%;">
+                            <strong>100% бонусов за коммунальные платежи</strong> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-header">
+                <div>
+                    <img src="https://sun9-west.userapi.com/sun9-16/s/v1/ig2/hlJaOdyWLwqdNg4a54N0K01Q9nrhw-7ylEYrEyKO3GdGLRLE6omfryT_ZQub9uuevFUmjiYP5fZPgGZ146FhX2VA.jpg?size=1847x767&quality=95&type=album" alt="5minuts">
+                </div>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <div id="mobile" >
+                        <h1>Получить онлайн-кредит в 3 шага!</h1>
+                        <p>
+                            <strong>ШАГ 1</strong>  – скачайте мобильное приложение Halyk Homebank (ios, android) <br>
+                            <strong>ШАГ 2</strong>  – зарегистрируйтесь в Halyk Homebank  <br>
+                            <strong>ШАГ 3</strong>  – получите онлайн-кредит за 5 минут в любой точке мира 7 дней в неделю <br> <br>
+
+                            Доступно кредитование самозанятых, военнослужащих и пенсионеров
+                        </p>
+                    </div>
+                    <div id="iphonerek" >
+                        <img src="https://sun9-west.userapi.com/sun9-5/s/v1/ig2/jmwIhzqFGOKkfpn6Gv9z7sj_9KYLle701wT1fHcVih7soIfSe3bOretHWE9WeY89mgcisPFIWxnh3t8tI10pmJ0G.jpg?size=417x742&quality=95&type=album" alt="tel">
+                    </div>
+                </div>
+                <div>
+                    <img src="https://sun9-west.userapi.com/sun9-55/s/v1/ig2/_5r-7ChxQceUdlPG7BlsI_CYhg2-SF2b6aHpAKMR3qfgzba6c-OvL2K_YIoAn_7N2eFZ_kYfXVWQK-Bi3m7YXIsp.jpg?size=1842x843&quality=95&type=album" alt="mm">
+                </div>
+                <div style="text-align: center;">
+                    <h2>Как получить кредит</h2>
+                    <iframe width="90%" height="500px" src="https://www.youtube.com/embed/XqNHa0r9YW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+                </div>
+                <div id="creditpogashen">
+                    <div id="creditpogashenimg">
+                        <img src="https://sun9-west.userapi.com/sun9-68/s/v1/ig2/sTP7b_W6zRrKFgThKFS76tZQx-J4c3ZK2QU-0L3AsTmcafJKAgUEOlRz4Wt9lZZWu_0ct4TOfnnDJkIW2on0KRPf.jpg?size=720x568&quality=95&type=album" alt="$">
+                    </div>
+                    <div id="creditpogashentext">
+                        <h2>Как погашать кредит</h2>
+                        <p>
+                            1. Сумма ежемесячного платежа списывается автоматически с карты Halyk Bank в дату платежа по графику  <br>
+                            <strong>Способы пополнения карты Halyk Bank: </strong>    
+                        </p>
+                        <ul>
+                            <li>Перевод средств со счета или карты Halyk Bank в Halyk Homebank (ios, android)</li>
+                            <li>Перевод средств с карты другого банка</li>
+                            <li>Пополнение средств через платежные терминалы Halyk Bank</li>
+                            <li>Пополнение средств через банкоматы Halyk Bank с функцией приема наличных денег CASH-IN</li>
+                            <li>Пополнение средств через кассу в отделениях Halyk Bank</li>
+                        </ul>
+                        <p>
+                            2. Доступно частичное и полное досрочное погашение в приложении Halyk Homebank без комиссий
+                        </p>
+                    </div>
+                </div>
+                <div id="setup">
+                    <h1>Установить Halyk Homebank</h1>
+                    <p>
+                        Зарегистрируйтесь в Halyk Homebank и оформите кредит уже через 5 минут</p>
+                </div>
+                <div style="text-align: center; padding: 1%;  background-color: beige; width: 100%;">
+                    <div>
+                        <h1>Как зарегистрироваться в Halyk Homebank</h1>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <div style="width: 30%;">
+                            <p>Шаг 1 - Установите Halyk Homebank
+                                Скачайте приложение Halyk Homebank на iPhone или Android</p>
+                        </div>
+                        <div style="width: 30%;">
+                            <p>Шаг 2 - Регистрация
+                                Нажмите "Регистрация", пройдите видео проверку и сфотографируйте удостоверение личности</p>
+
+                        </div>
+                        <div style="width: 30%;">
+                            <p>
+                                Шаг 3 - Войдите в Halyk Homebank
+Готово! Теперь вы можете использовать более 5000 продуктов и услуг банка онлайн, оплачивать без комиссий с бонусами
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="end">
+				<div>
+					<h5>
+						<a href="halyk_tarif.html">Тарифы</a> <a href="https://halykbank.kz/documents">Документы</a>
+					</h5>
+					<p style="color:rgb(111 111 111);">
+						Лицензия на проведение банковских и иных операций и деятельности на рынке ценных бумаг №1.2.47/230/38/1 от 3 
+						февраля 2020 года выдана Агентством Республики Казахстан по регулированию и 
+						развитию финансового рынка <br><br> powered by <a href="http://amphibia.kz/"> <u>amphibia</u></a> 
+					</p>
+				</div>
+				<div>
+					<div style="display: flex; align-content: flex-start;">
+						<div>
+							<a href="https://apps.apple.com/us/app/homebank-kz/id440635615"><img src="https://halykbank.kz/themes/halyk/assets/images/appstore.svg" alt="App store" id="endimg">
+							</a>
+						</div>
+						<div>
+							<a href="https://play.google.com/store/apps/details?id=kz.kkb.homebank">
+							<img src="https://halykbank.kz/themes/halyk/assets/images/google-play.svg" alt="google play" id="endimg">
+							</a>
+						</div>
+						<div>
+							<a href="https://appgallery.cloud.huawei.com/ag/n/app/C102945379?locale=ru_RU&source=halykbank.kz">
+							<img src="https://halykbank.kz/themes/halyk/assets/images/appgallery.svg" alt="App gallery" id="endimg">
+							</a>
+						</div>
+					</div>
+					<div style="text-align: center;">
+						<p>Мы в соц. сетях</p>
+						<a href="https://www.facebook.com/halykbank/">facebook</a>	
+						<a href="https://www.instagram.com/halykbank.kz/">instagram</a>
+						<a href="https://twitter.com/halykbank_kz">twitter</a>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+			var a = document.querySelector('#credits');
+			var b = document.querySelector('#instalments');
+			var c = document.querySelector('#cards');
+			var d = document.querySelector('#deposite');
+			var f = document.querySelector('#transfers');
+			var g = document.querySelector('#others');
+			a.onmouseout = function(e) {
+				document.getElementById('creditsSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			a.onmouseover = function(e) {
+				document.getElementById('creditsSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			b.onmouseout = function(e) {
+				document.getElementById('instalmentsSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			b.onmouseover = function(e) {
+				document.getElementById('instalmentsSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			c.onmouseout = function(e) {
+				document.getElementById('cardsSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			c.onmouseover = function(e) {
+				document.getElementById('cardsSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			d.onmouseout = function(e) {
+				document.getElementById('depositeSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			d.onmouseover = function(e) {
+				document.getElementById('depositeSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			
+			f.onmouseout = function(e) {
+				document.getElementById('transfersSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			f.onmouseover = function(e) {
+				document.getElementById('transfersSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+			g.onmouseout = function(e) {
+				document.getElementById('othersSlide').style.display='none'; 
+				document.getElementById('slide').style.display='block';
+				document.getElementById('scrollNumber').style.display='block';
+			}
+			g.onmouseover = function(e) {
+				document.getElementById('othersSlide').style.display='block'; 
+				document.getElementById('slide').style.display='none'; 
+				document.getElementById('scrollNumber').style.display='none';
+			};
+		}
+        let menuBtn = document.querySelector('.menu-btn');
+		let menu = document.querySelector('.menu');
+
+		menuBtn.addEventListener('click', function(){
+			menuBtn.classList.toggle('active');
+			menu.classList.toggle('active');
+		})
+		</script>
+    </script>
+</body>
+</html>
