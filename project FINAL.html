@@ -239,6 +239,9 @@
 				background-color: #717171;
 				color: #717171;
 			}
+			#endimg{
+                width: 100%;
+            }
 
   		}		
 
@@ -303,6 +306,21 @@
 		.menu li {
 			list-style-type: none;
 			margin-top: 15px;
+		}
+		@-webkit-keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+		}
+
+		@keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+		}
+		.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
 		}
 
 				
@@ -801,7 +819,7 @@
 								</li>
 							</ul>
 						</div>
-						<a class="button" href="https://halykbank.kz/online-credit">Оформить кредит</a>
+						<a class="button" href="C:\Users\PC\Desktop\WEB\Front_End_Project\second.html">Оформить кредит</a>
 
 					</div>
 					<div id="halyk_market" class="card">
@@ -918,17 +936,17 @@
 					<div style="display: flex; 
 					align-content: flex-start;">
 						<div>
-							<a href="https://apps.apple.com/us/app/homebank-kz/id440635615"><img src="https://halykbank.kz/themes/halyk/assets/images/appstore.svg" alt="App store" style="background-color: black; width: 100%; border-radius: 10px;">
+							<a href="https://apps.apple.com/us/app/homebank-kz/id440635615"><img src="https://halykbank.kz/themes/halyk/assets/images/appstore.svg" alt="App store" id="endimg">
 							</a>
 						</div>
 						<div>
 							<a href="https://play.google.com/store/apps/details?id=kz.kkb.homebank">
-							<img src="https://halykbank.kz/themes/halyk/assets/images/google-play.svg" alt="google play" style="background-color: black; width: 100%; border-radius: 10px;">
+							<img src="https://halykbank.kz/themes/halyk/assets/images/google-play.svg" alt="google play" id="endimg">
 							</a>
 						</div>
 						<div>
 							<a href="https://appgallery.cloud.huawei.com/ag/n/app/C102945379?locale=ru_RU&source=halykbank.kz">
-							<img src="https://halykbank.kz/themes/halyk/assets/images/appgallery.svg" alt="App gallery" style="background-color: black; width: 100%; border-radius: 10px;">
+							<img src="https://halykbank.kz/themes/halyk/assets/images/appgallery.svg" alt="App gallery" id="endimg">
 							</a>
 						</div>
 					</div>
