@@ -15,19 +15,3 @@ menuClose.addEventListener('click', function () {
     menuOpen.style.display = 'block';
     menuClose.style.display = 'none';
 });
-
-let menuOpen2 = document.querySelector('.menu-open2');
-let menuClose2 = document.querySelector('.menu-close2');
-let menu2 = document.querySelector('.menu2');
-
-menuOpen2.addEventListener('click', function () {
-    menu2.style.display = 'block';
-    menuOpen2.style.display = 'none';
-    menuClose2.style.display = 'block';
-});
-
-menuClose2.addEventListener('click', function () {
-    menu2.style.display = 'none';
-    menuOpen2.style.display = 'block';
-    menuClose2.style.display = 'none';
-});
