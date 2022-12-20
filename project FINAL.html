@@ -96,8 +96,6 @@
 			flex-wrap: wrap;
   			justify-content: center;
 		}
-		.header{
-		}
 		.header-logo{
 			max-width: 15%;
 			margin-top: 1%;
@@ -196,9 +194,6 @@
 				font-size: 9pt;
 			}
 			
-			.menu-btn{
-				display: block;
-			}
 
 			#eur{
 				display: none;
@@ -237,40 +232,38 @@
 			.nav{
 				display: none;
 			}
-			#btn_nav{
-				display: block;
-				position: absolute;
-				right: 10%;
-			}
 			.headers-logo{
 				width: 110px;
+			}
+			.menu-btn span{
+				background-color: #717171;
+				color: #717171;
 			}
 
   		}		
 
-		  header {
+		header {
 			display: flex;
 			justify-content: flex-end;
+			
 		}
 		.menu-btn {
 			width: 30px;
 			height: 30px;
 			position: relative;
-			z-index:100;
+			z-index:5;
 			overflow: hidden;
-			display: none;
 		}
 
 		.menu-btn span {
-
 			width: 30px;
 			height: 2px;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			background-color: #222222;
-			transition: all 0.5s;
+			color: black;
+			transition: all .0s;
 		}
 
 		.menu-btn span:nth-of-type(2) {
@@ -344,7 +337,49 @@
 									<a class="nav_text"  href="tel:7111">Телефон</a>
 								</nav>
 								
-							<header id="btn_nav">
+							
+							</div>
+						</div>
+						
+						<div>
+							<nav class="nav">
+								<a class="nav_text2" href="https://halykbank.kz/homebank">Home bank</a>
+								<a class="nav_text2" href="https://halykbank.kz/promo">Акций</a>
+								<a class="nav_text2" href="https://halykbank.kz/credits">
+									<span id="credits">
+										Кредиты
+									</span>
+									</a>
+								<a class="nav_text2" href="https://halykbank.kz/market">
+									Маркет
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/instalments">
+									<span id="instalments">
+										Рассрочка
+									</span>
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/cards">
+									<span id="cards">
+										Карта
+									</span>
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/deposits">
+									<span id="deposite">
+										Депозиты
+									</span>
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/transfers">
+									<span id="transfers">
+										Переводы
+									</span>
+								</a>
+								<a class="nav_text2" href="https://halykbank.kz/others">
+									<span id="others">
+										Другое
+									</span>
+								</a>
+							</nav>
+							<header>
 								<div class="menu-btn">
 									<span></span>
 									<span></span>
@@ -396,48 +431,6 @@
 								</ul>
 								</nav>
 							</div>
-							</div>
-						</div>
-						
-						<div>
-							<nav class="nav">
-								<a class="nav_text2" href="https://halykbank.kz/homebank">Home bank</a>
-								<a class="nav_text2" href="https://halykbank.kz/promo">Акций</a>
-								<a class="nav_text2" href="https://halykbank.kz/credits">
-									<span id="credits">
-										Кредиты
-									</span>
-									</a>
-								<a class="nav_text2" href="https://halykbank.kz/market">
-									Маркет
-								</a>
-								<a class="nav_text2" href="https://halykbank.kz/instalments">
-									<span id="instalments">
-										Рассрочка
-									</span>
-								</a>
-								<a class="nav_text2" href="https://halykbank.kz/cards">
-									<span id="cards">
-										Карта
-									</span>
-								</a>
-								<a class="nav_text2" href="https://halykbank.kz/deposits">
-									<span id="deposite">
-										Депозиты
-									</span>
-								</a>
-								<a class="nav_text2" href="https://halykbank.kz/transfers">
-									<span id="transfers">
-										Переводы
-									</span>
-								</a>
-								<a class="nav_text2" href="https://halykbank.kz/others">
-									<span id="others">
-										Другое
-									</span>
-								</a>
-							</nav>
-		
 						</div>
 					</div>
 					
@@ -445,7 +438,7 @@
 				</div>
 			</div>
 			<div class="main">
-
+				
 				<div id="slide" class="slideshow-container">
 
 					<div class="mySlides fade">
